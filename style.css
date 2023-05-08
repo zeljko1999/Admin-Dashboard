@@ -7,15 +7,31 @@ body{
 .container{
     display:grid;
     grid-template-rows: 1fr 4.5fr;
-    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-columns: 1fr 4fr 1.3fr;
     height: 100vh;
 }
 
 .header{
+    padding: 15px 40px 15px 40px;
     display:grid;
     background-color: white;
     grid-area: 1 / 2 / 2 / 4;
     color:black;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1.2fr;
+    align-items: center;
+}
+.white{
+    filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(160deg) brightness(115%) contrast(104%);
+}
+.black{
+    filter: invert(0%) sepia(6%) saturate(25%) hue-rotate(267deg) brightness(106%) contrast(106%);
+}
+
+.header-buttons{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:35px;
 }
 
 .sidebar{
@@ -23,6 +39,28 @@ body{
     grid-area: 1 / 1 / 3 / 2;
     color:white;
     text-align:left;
+}
+.dashboard-logo{
+    width:40px;
+    height:40px;
+}
+
+.option-logo{
+    width:32px;
+    height: 32px;
+    vertical-align: middle;
+}
+.text{
+    display:inline-block;
+}
+
+.text-header{
+    display:inline-block;
+    vertical-align: top;
+}
+
+.text, .text-header{
+    padding-left: 15px;
 }
 
 .sidebar .menu-option,
@@ -109,4 +147,40 @@ h2{
 
 .trending-tag{
     font-weight: 700;
+}
+
+
+.button-9 {
+  appearance: button;
+  backface-visibility: hidden;
+  background-color: #405cf5;
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+  font-size: 100%;
+  height: 44px;
+  line-height: 1.15;
+  margin: 12px 0 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 25px;
+  text-align: center;
+  text-transform: none;
+  transform: translateZ(0);
+  transition: all .2s,box-shadow .08s ease-in;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-9:disabled {
+  cursor: default;
+}
+
+.button-9:focus {
+  box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset, rgba(50, 50, 93, .2) 0 6px 15px 0, rgba(0, 0, 0, .1) 0 2px 2px 0, rgba(50, 151, 211, .3) 0 0 0 4px;
 }
